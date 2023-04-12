@@ -1,16 +1,23 @@
 const express = require('express');
+const app = express();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const students = require('../dataGenerator');
 
-const app = express();
+
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.json());
+
 
 // Secret key for JWT
 const secretKey = 'mysecretkey';
 
 // Route to authenticate a user and generate a JWT token
-app.post('/api/login', async (req, res) => {
-  const { email, password } = req.body;
+app.post('/login', async (req, res) => {
+    console.log("hello world");
+  const { email, password } = req.body; 
 
   // Find the student with the given email
   const student = students.find(s => s.email === email);
@@ -63,5 +70,6 @@ app.get('/api/students/:studentNumber', (req, res) => {
     return res.status(401).json({ message: 'Authentication failed' });
   }
 });
+
 
 module.exports = app;

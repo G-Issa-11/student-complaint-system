@@ -30,6 +30,9 @@ const router = express.Router()
 
 module.exports = router;
 
+const authenticate = require('../controllers/auth.js');
+
+app.use('/api', authenticate);
 
 
 

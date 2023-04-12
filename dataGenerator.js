@@ -27,6 +27,7 @@ const generateStudentData = (count) => {
       faculty,
       academicAdvisor,
       gpa,
+      password,
       passwordHash // Store the hashed password
     };
 
