@@ -11,8 +11,6 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 
-
-
 mongoose.connect(mongoString);
 const database = mongoose.connection;
 
@@ -26,14 +24,15 @@ database.once('connected', () => {
 
 const routes = require('../routes/routes');
 app.use('/api', routes);
-const router = express.Router()
 
+const adminRoutes = require('../routes/adminRoutes');
+app.use('/api/admin', adminRoutes);
+
+const router = express.Router()
 module.exports = router;
 
-const authenticate = require('../controllers/auth.js');
-
-app.use('/api', authenticate);
-
+const authenticateUser = require('../controllers/auth.js');
+app.use('/api/student', authenticateUser);
 
 
 app.use(express.json());
