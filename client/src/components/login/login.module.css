@@ -1,0 +1,96 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: #F1F6F9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+  width: 30vw;
+  height: 70vh;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.box {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+    width: 17vw;
+    margin: 25px 0;
+}
+.input {
+    width: 20vw;
+    max-width: 100%;
+    border-bottom: 2px solid #394867;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.box input[type = "text"],.box input[type = "password"] {
+    flex: 1;
+    margin: 15px auto;
+    background: #fff;
+    border: 0;
+    outline: none;
+    color: #212a3e;
+    transition: all 0.2s ease-out;
+    width: 100%;
+    max-width: 20vw;
+    }
+
+::-webkit-input-placeholder {
+    color: #394867;
+}
+
+.box span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #394867;
+  }
+
+
+.submitBtn {
+        background-color:#394867;
+        color: #fff;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        width: 13vw;
+        margin: 50px;
+        transition: 0.25s;
+        font-weight: 400;
+        font-size: 1em;
+        cursor: pointer;
+        display: inline-block;
+}
+
+
+.submitBtn:hover,
+.submitBtn:focus {
+    box-shadow: inset 100% 0 0 0 #fff;
+    color: #394867;
+    background-color: white;
+    font-weight: 700;
+}

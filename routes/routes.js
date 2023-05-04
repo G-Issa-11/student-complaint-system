@@ -4,7 +4,6 @@ const router = express.Router();
 const ObjectId = require("mongoose").Types.ObjectId;
 const students = require('../dataGenerator'); // Import the student dataset module
 
-
 //Post Method
 router.post("/post", async (req, res) => {
   console.log(req.body); // Debugging line to check if the request body is received correctly
