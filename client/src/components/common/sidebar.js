@@ -1,25 +1,19 @@
 import React, { useState } from 'react';
 import styles from './sidebar.module.css';
-import {
-  Route,
-  NavLink,
-  HashRouter
-} from "react-router-dom";
-
 import {SidebarData} from './sidebardata'
+import { Link } from 'react-router-dom';
 
-
-const Home = () => {
-  /**window.location.pathname = val.link*/
+const Sidebar = () => {
   return (
-
     <div className={styles.sidebar}>
         <ul className={styles.sidebarList} >
         {SidebarData.map((val, key) => {
             return (
                 <li className = {val.title != "logout" ? styles.sidebarItem: [styles.sidebarItem, styles.bottom, styles['d-flex-c']].join(' ')} key={key} onClick={console.log("you clicked me") }>
-                    <div className={styles.icon}>{val.icon}</div>
-                    <div className={styles.title}>{val.title}</div>
+                    <Link to={val.path} className={styles.sidebarLink} replace>
+                      <div className={styles.icon}>{val.icon}</div>
+                      <div className={styles.title}>{val.title}</div>
+                    </Link>
                 </li>
             )
         })}
@@ -28,4 +22,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Sidebar;

@@ -9,26 +9,26 @@ export const SidebarData = [
     {
         title: "Home",
         icon: <HomeIcon />,
-        link: "/home"
+        path: "/home"
     },
     {
         title: "Dashboard",
         icon: <DashboardIcon />,
-        link: "/about"
+        path: "/dashboard"
     },
     {
         title: "Contact Us",
         icon: <ContactPageIcon/>,
-        link: "/contactUs"
+        path: "/contactUs"
     },
     {
         title: "New Complaint",
         icon: <AddCircleOutlineIcon/>,
-        link: "/post"
+        path: "post"
     },
     {
         title: "logout",
         icon: <LogoutIcon />,
-        link: "/"
+        path: "/"
     },
 ]
