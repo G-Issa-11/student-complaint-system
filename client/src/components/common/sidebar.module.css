@@ -3,11 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .sidebar {
     height: 100vh;
     width: 17vw;
     background-color: #212a3e;
-    color: #fff
+    color: #fff;
+    display: flex;
+    z-index: -1000;
 }
 
 .sidebarList {
@@ -58,3 +61,19 @@
     border-top: 1px solid #ccc;
 }
 
+.sidebarList .sidebarItem .sidebarLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 50px;
+    padding: 35px 10px;
+    transition: 0.25s all;
+    cursor: pointer;
+  }
+  
+  .sidebarList .sidebarItem .sidebarLink:hover {
+    background-color: #394867;
+    font-size: 1.1rem;
+  }
