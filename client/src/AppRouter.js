@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, HashRouter } from 'react-router
 
 import Home from './components/home/home.js';
 import Dashboard from './components/dashboard/dashboard.js';
-import ContactPage from './components/contactUs/contactUs.js';
+// import ContactPage from './components/contactUs/contactUs.js';
 import AddNewComplaint from './components/newComplaint/newComplaint';
 
 const AppRouter = () => {
@@ -14,7 +14,7 @@ const AppRouter = () => {
         <Route exact path="/" component={Home}/>
         <Route path="/home" component={Home}/>
         <Route path="/dashboard" component={Dashboard}/>
-        <Route path="/contactUs" component={ContactPage}/>
+        {/* <Route path="/contactUs" component={ContactPage}/> */}
         <Route path="/post" component={AddNewComplaint}/>
       </div>
     </div>

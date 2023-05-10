@@ -16,11 +16,11 @@ export const SidebarData = [
         icon: <DashboardIcon />,
         path: "/dashboard"
     },
-    {
-        title: "Contact Us",
-        icon: <ContactPageIcon/>,
-        path: "/contactUs"
-    },
+    // {
+    //     title: "Contact Us",
+    //     icon: <ContactPageIcon/>,
+    //     path: "/contactUs"
+    // },
     {
         title: "New Complaint",
         icon: <AddCircleOutlineIcon/>,

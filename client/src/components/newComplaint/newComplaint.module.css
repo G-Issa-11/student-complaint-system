@@ -6,5 +6,77 @@
 .postPage {
     position: absolute;
     top: 0;
-    padding: 20px
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
 }
+  
+  .personalInformation {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  
+  }
+  
+  .personalInformation div {
+    margin-bottom: 10px;
+  }
+  
+  .formSection {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 20px;
+  }
+  
+  .title,
+  .complaintType,
+  .discription {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .title input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 7px;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+  
+  .complaintType select {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 7px;
+    border-radius: 3px;
+    margin-top: 10px;
+    color: gray
+  }
+  
+  .discription textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ddd;
+    padding: 7px;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+
+  .btns button {
+    background-color: #394867;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: none;
+  }
+  
